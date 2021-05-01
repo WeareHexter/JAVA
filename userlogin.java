@@ -34,7 +34,7 @@ public class userlogin {
 			System.out.println("Enter the Password");
 			password = sc.next();
 
-			if ("Demo".equals(username) && "p@ssw0rd".equals(password)) {
+			if ("Demo".equals(username) && "P@ssw0rd".equals(password)) {
 				
 				System.out.println("Login Successfully");
 				i++;
