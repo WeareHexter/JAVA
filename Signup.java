@@ -2,6 +2,8 @@ package PROJECT;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.Statement;
 
 
 public class Signup {
@@ -23,6 +25,10 @@ public class Signup {
 		System.out.println("Enter your password again");
 		 pass2 = br.readLine();
 		
+		if (uname.length()<=30) {
+			System.out.println(uname.length());
+			if (pass1.length()<=30) {
+				System.out.println(pass1.length());
 		
 		if (pass1.equals(pass2)) {
 			System.out.println("password matches");
@@ -49,6 +55,12 @@ public class Signup {
 		} else {
 			System.out.println("password did't matches");
 		}
+			}
+		} else {
+			System.out.println("Please try again !!!");
+			System.out.println(uname.length());
+			System.out.println(pass1.length());
+		}
 		}
 	}
 	public void display() {
@@ -64,3 +76,4 @@ public class Signup {
 		su.display();
 	}
 }
+
