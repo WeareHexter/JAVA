@@ -12,6 +12,10 @@ public class Signup {
 	String pass2 ;
 
 	public void signup() throws Exception {
+		int s = 1 ;
+		while (s == 1) {
+			
+		
 		System.out.println("Enter your Username");
 		 uname = br.readLine();
 		System.out.println("Enter your password");
@@ -22,6 +26,7 @@ public class Signup {
 		
 		if (pass1.equals(pass2)) {
 			System.out.println("password matches");
+			s++;
 			///////////////////////
 			Connection con = DBConnection.getConnection();
 			if (con != null) {
@@ -44,13 +49,14 @@ public class Signup {
 		} else {
 			System.out.println("password did't matches");
 		}
-		
+		}
 	}
 	public void display() {
 		System.out.println("your Username :" + uname);
 		System.out.println("your password :" + pass1);
 		System.out.println("your Repassword :" + pass2);
 	}
+	
 	public static void main(String[] args) throws Exception {
 		
 		Signup su = new Signup();
